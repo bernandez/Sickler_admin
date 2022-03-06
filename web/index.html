@@ -33,6 +33,11 @@
   <link rel="manifest" href="manifest.json">
 </head>
 <body>
+  <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-storage.js"></script>
+
   <!-- This script installs service_worker.js to provide PWA functionality to
        application. For more information, see:
        https://developers.google.com/web/fundamentals/primers/service-workers -->
@@ -99,6 +104,29 @@
       // Service workers not supported. Just drop the <script> tag.
       loadMainDartJs();
     }
+  </script>
+  <script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.8/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.6.8/firebase-analytics.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+  
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+      apiKey: "AIzaSyDqoYZbDvHy6OhdElvj5eu4VcxnzFtd_8c",
+      authDomain: "sickler.firebaseapp.com",
+      projectId: "sickler",
+      storageBucket: "sickler.appspot.com",
+      messagingSenderId: "153884223348",
+      appId: "1:153884223348:web:36fa37e6778418cf1a6e21",
+      measurementId: "G-MSMSFQNQ9T"
+    };
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
   </script>
 </body>
 </html>
