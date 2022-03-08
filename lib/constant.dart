@@ -2,7 +2,26 @@ import 'package:flutter/cupertino.dart';
 
 import 'package:flutter/material.dart';
 
+class Styles {
+  static Color scaffoldBackgroundColor = const Color(0xFFe0efff);
+  static Color defaultRedColor = const Color(0xffff698a);
+  static Color defaultYellowColor = const Color(0xFFfedd69);
+  static Color defaultBlueColor = const Color(0xff52beff);
+  static Color defaultGreyColor = const Color(0xff77839a);
+  static Color defaultLightGreyColor = const Color(0xffc4c4c4);
+  static Color defaultLightWhiteColor = const Color(0xFFf2f6fe);
 
+  static double defaultPadding = 18.0;
+
+  static BorderRadius defaultBorderRadius = BorderRadius.circular(20);
+
+  static ScrollbarThemeData scrollbarTheme =
+      const ScrollbarThemeData().copyWith(
+    thumbColor: MaterialStateProperty.all(defaultYellowColor),
+    isAlwaysShown: false,
+    interactive: true,
+  );
+}
 
 ///----Colours----///
 const Color kPurple = Color(0xFF531CF7);
@@ -10,6 +29,7 @@ const Color kPurple80 = Color(0xFF2B2B2C);
 const Color kPurple60 = Color(0xFFB298FF);
 const Color kPurple40 = Color(0xFFD3C5FF);
 const Color kPurple20 = Color(0xFFEEE9FF);
+const Color kblue = Color(0xff52beff);
 
 const Color kFuchsia = Color(0xFFFC4684);
 const Color kFuchsia80 = Color(0xFFFF7DA9);
@@ -54,11 +74,11 @@ const double kDefaultPadding2x = 32.0;
 ///----TextStyles----///
 const TextStyle kHeading = TextStyle(fontWeight: FontWeight.bold, fontSize: 28);
 const TextStyle kHeadingLight =
-TextStyle(fontWeight: FontWeight.normal, fontSize: 28);
+    TextStyle(fontWeight: FontWeight.normal, fontSize: 28);
 const TextStyle kBody = TextStyle(fontWeight: FontWeight.normal, fontSize: 14);
 const TextStyle kBodyBold =
-TextStyle(fontWeight: FontWeight.bold, fontSize: 14);
+    TextStyle(fontWeight: FontWeight.bold, fontSize: 14);
 const TextStyle kButtonText =
-TextStyle(fontWeight: FontWeight.bold, fontSize: 16);
+    TextStyle(fontWeight: FontWeight.bold, fontSize: 16);
 const TextStyle kFootNote =
-TextStyle(fontWeight: FontWeight.normal, fontSize: 11);
+    TextStyle(fontWeight: FontWeight.normal, fontSize: 11);
