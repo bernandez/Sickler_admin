@@ -3,12 +3,37 @@ import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:siclker_admin/constant.dart';
+import 'package:siclker_admin/main/components/hb_chart.dart';
 import 'package:siclker_admin/main/components/search_field.dart';
 import 'package:siclker_admin/main/components/water_chart.dart';
 import 'water_details.dart';
 import 'package:charts_flutter/flutter.dart' as charts;
+import 'hb_details.dart';
 
 class DashboardScreen extends StatelessWidget {
+  final List<HbRequirements> info = [
+    HbRequirements(
+      weeek: "W1",
+      blood_level: 20,
+      barColor: charts.ColorUtil.fromDartColor(kFuchsia60),
+    ),
+    HbRequirements(
+      weeek: "W2",
+      blood_level: 30,
+      barColor: charts.ColorUtil.fromDartColor(kFuchsia60),
+    ),
+    HbRequirements(
+      weeek: "W3",
+      blood_level: 10,
+      barColor: charts.ColorUtil.fromDartColor(kFuchsia60),
+    ),
+    HbRequirements(
+      weeek: "W4",
+      blood_level: 15,
+      barColor: charts.ColorUtil.fromDartColor(kFuchsia60),
+    ),
+  ];
+
   final List<WaterRequirements> data = [
     WaterRequirements(
       year: "Mon",
@@ -81,8 +106,8 @@ class DashboardScreen extends StatelessWidget {
                     padding: const EdgeInsets.all(8.0),
                     child: Column(
                       children: [
-                        Text("HB Details for this week"),
-                        Expanded(child: WaterChart(data: data)),
+                        Text("HB Details for this Month"),
+                        Expanded(child: HbChart(info: info)),
                       ],
                     ),
                   ),
