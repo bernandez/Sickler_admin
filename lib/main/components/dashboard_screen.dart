@@ -77,117 +77,134 @@ class DashboardScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: [
-        Expanded(
-          flex: 7,
-          child: Container(
-            child: Column(
+    return Container(
+      child: Container(
+        child: Column(
+          children: [
+            Row(
               children: [
-                Row(
-                  children: [
-                    Container(
-                      height: 300,
-                      width: 350,
-                      padding: EdgeInsets.all(10),
-                      child: Card(
-                        child: Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Column(
-                            children: [
-                              Text("Water Details for this week"),
-                              Expanded(child: WaterChart(data: data)),
-                            ],
-                          ),
-                        ),
-                      ),
-                    ),
-                    Container(
-                      height: 300,
-                      width: 350,
-                      padding: EdgeInsets.all(10),
-                      child: Card(
-                        child: Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Column(
-                            children: [
-                              Text("HB Details for this Month"),
-                              Expanded(child: HbChart(info: info)),
-                            ],
-                          ),
-                        ),
-                      ),
-                    ),
-                  ],
-                ), //your 1st Row
-                Row(
-                  children: [
-                    Container(
-                      height: 300,
-                      width: 350,
-                      padding: EdgeInsets.all(10),
-                      child: Card(
-                        child: Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Column(
-                            children: [
-                              Text("Oxygen  Level for this week"),
-                              Expanded(child: WaterChart(data: data)),
-                            ],
-                          ),
-                        ),
-                      ),
-                    ),
-                    Container(
-                      height: 300,
-                      width: 350,
-                      padding: EdgeInsets.all(10),
-                      child: Card(
-                        child: Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Column(
-                            children: [
-                              Text("Water Details for this week"),
-                              Expanded(child: WaterChart(data: data)),
-                            ],
-                          ),
-                        ),
-                      ),
-                    ),
-                  ],
-                ), //your 2nd Row
-                //your 3rd Row
+                Container(
+                  height: 50,
+                  width: 1000,
+                  child: Header(),
+                )
               ],
             ),
-          ),
-        ),
-        Expanded(
-          flex: 3,
-          child: Container(
-            padding: const EdgeInsets.all(kDefaultPadding),
-            height: 600,
-            width: 400,
-            decoration: const BoxDecoration(
-                color: Color.fromARGB(255, 238, 238, 238),
-                borderRadius: BorderRadius.all(
-                  Radius.circular(10),
-                )),
-            child: Column(children: const [
-              Text(
-                "Patient Details",
-                style: TextStyle(
-                  fontSize: 25,
-                  fontWeight: FontWeight.w500,
+            Row(
+              children: [
+                Expanded(
+                  flex: 7,
+                  child: Container(
+                    child: Column(
+                      children: [
+                        Row(
+                          children: [
+                            Container(
+                              height: 300,
+                              width: 350,
+                              padding: EdgeInsets.all(10),
+                              child: Card(
+                                child: Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: Column(
+                                    children: [
+                                      Text("Water Details for this week"),
+                                      Expanded(child: WaterChart(data: data)),
+                                    ],
+                                  ),
+                                ),
+                              ),
+                            ),
+                            Container(
+                              height: 300,
+                              width: 350,
+                              padding: EdgeInsets.all(10),
+                              child: Card(
+                                child: Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: Column(
+                                    children: [
+                                      Text("HB Details for this Month"),
+                                      Expanded(child: HbChart(info: info)),
+                                    ],
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ],
+                        ), //your 1st Row
+                        Row(
+                          children: [
+                            Container(
+                              height: 300,
+                              width: 350,
+                              padding: EdgeInsets.all(10),
+                              child: Card(
+                                child: Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: Column(
+                                    children: [
+                                      Text("Oxygen  Level for this week"),
+                                      Expanded(child: WaterChart(data: data)),
+                                    ],
+                                  ),
+                                ),
+                              ),
+                            ),
+                            Container(
+                              height: 300,
+                              width: 350,
+                              padding: EdgeInsets.all(10),
+                              child: Card(
+                                child: Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: Column(
+                                    children: [
+                                      Text("Water Details for this week"),
+                                      Expanded(child: WaterChart(data: data)),
+                                    ],
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ],
+                        ), //your 2nd Row
+                        //your 3rd Row
+                      ],
+                    ),
+                  ),
                 ),
-              ),
-              SizedBox(
-                height: kDefaultPadding,
-              ),
-              Chart()
-            ]),
-          ),
-        )
-      ],
+                Expanded(
+                  flex: 3,
+                  child: Container(
+                    padding: const EdgeInsets.all(kDefaultPadding),
+                    height: 600,
+                    width: 400,
+                    decoration: const BoxDecoration(
+                        color: Color.fromARGB(255, 238, 238, 238),
+                        borderRadius: BorderRadius.all(
+                          Radius.circular(10),
+                        )),
+                    child: Column(children: const [
+                      Text(
+                        "Patient Details",
+                        style: TextStyle(
+                          fontSize: 25,
+                          fontWeight: FontWeight.w500,
+                        ),
+                      ),
+                      SizedBox(
+                        height: kDefaultPadding,
+                      ),
+                      Chart()
+                    ]),
+                  ),
+                )
+              ],
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
@@ -243,14 +260,16 @@ class Header extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(children: [
+      const Spacer(),
       Text(
-        "Dashboard",
+        "Patient Statistics",
         style: Theme.of(context).textTheme.headline6,
       ),
       const Spacer(),
-      const Expanded(
-        child: SearchField(),
-      ),
+      // const Expanded(
+      //   flex: 6,
+      //   child: SearchField(),
+      // ),
       const Profile()
     ]);
   }

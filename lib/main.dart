@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:siclker_admin/screens/authscreens/sign_in_screen.dart';
 import 'theme.dart';
 import 'package:siclker_admin/main/components/main_screen.dart';
 
@@ -23,7 +24,6 @@ class _AppState extends State<App> {
   /// The future is part of the state of our widget. We should not call `initializeApp`
   /// directly inside [build].
 
-
   @override
   Widget build(BuildContext context) {
     return MyApp();
@@ -40,9 +40,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Sickler Admin Panel',
       theme: sicklerLightTheme(context),
-
-      home: const MainScreen(),
+      home: const SicklerSignInScreen(),
     );
   }
 }
-

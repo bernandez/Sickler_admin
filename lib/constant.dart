@@ -25,11 +25,10 @@ class Styles {
 
 ///----Colours----///
 const Color kPurple = Color(0xFF531CF7);
-const Color kPurple80 = Color(0xFF2B2B2C);
+const Color kPurple80 = Color(0xFF7B4FFF);
 const Color kPurple60 = Color(0xFFB298FF);
 const Color kPurple40 = Color(0xFFD3C5FF);
 const Color kPurple20 = Color(0xFFEEE9FF);
-const Color kblue = Color(0xff52beff);
 
 const Color kFuchsia = Color(0xFFFC4684);
 const Color kFuchsia80 = Color(0xFFFF7DA9);
@@ -60,9 +59,10 @@ const Color kGreen80 = Color(0xFF85EBD1);
 const Color kGreen60 = Color(0xFFBAF2E4);
 const Color kGreen40 = Color(0xFFD0F9EF);
 const Color kGreen20 = Color(0xFFE8FDF8);
+const Color kblue = Color(0xff52beff);
 
 const Color kDark = Color(0xFF353535);
-const Color kDark80 = Color(0xFF727272);
+const Color kDark80 = Color(0xFF4C4C4C);
 const Color kDark60 = Color(0xFFBDBDBD);
 const Color kDark40 = Color(0xFFD7D7D7);
 const Color kDark20 = Color(0xFFF4F4F4);
