@@ -40,7 +40,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Sickler Admin Panel',
       theme: sicklerLightTheme(context),
-      home: const SicklerSignInScreen(),
+      home: const MainScreen(),
     );
   }
 }

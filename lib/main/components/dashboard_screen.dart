@@ -185,7 +185,7 @@ class DashboardScreen extends StatelessWidget {
                         borderRadius: BorderRadius.all(
                           Radius.circular(10),
                         )),
-                    child: Column(children: const [
+                    child: Column(children: [
                       Text(
                         "Patient Details",
                         style: TextStyle(
@@ -196,7 +196,35 @@ class DashboardScreen extends StatelessWidget {
                       SizedBox(
                         height: kDefaultPadding,
                       ),
-                      Chart()
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(20),
+                        // Image border
+                        child: SizedBox.fromSize(
+                          size: Size.fromRadius(100), // Image radius
+                          child: Image.network('assets/images/profile_pic.jpg',
+                              fit: BoxFit.cover),
+                        ),
+                      ),
+                      SizedBox(
+                        height: kDefaultPadding,
+                      ),
+                      Text(
+                        "Name: Alouzeh Brandone",
+                        style: TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.w500,
+                        ),
+                      ),
+                      SizedBox(
+                        height: kDefaultPadding,
+                      ),
+                      Text(
+                        "Height: 1.5 metres     ",
+                        style: TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.w500,
+                        ),
+                      ),
                     ]),
                   ),
                 )
@@ -270,7 +298,7 @@ class Header extends StatelessWidget {
       //   flex: 6,
       //   child: SearchField(),
       // ),
-      const Profile()
+      // const Profile()
     ]);
   }
 }
@@ -287,13 +315,9 @@ class Profile extends StatelessWidget {
       decoration: BoxDecoration(
           border: Border.all(color: Colors.white),
           borderRadius: const BorderRadius.all(Radius.circular(10)),
-          color: kRed60),
+          color: Colors.grey),
       child: Row(
         children: [
-          Image.asset(
-            "assets/images/profile_pic.jpg",
-            height: 38,
-          ),
           const Padding(
             padding: EdgeInsets.symmetric(horizontal: kDefaultPadding / 2),
             child: Text("Alouzeh Brandone"),

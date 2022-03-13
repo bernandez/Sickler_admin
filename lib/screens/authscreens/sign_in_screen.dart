@@ -71,7 +71,7 @@ class _SicklerSignInScreenState extends State<SicklerSignInScreen> {
                       SizedBox(height: relHeight(90, context)),
                       Center(
                         child: Text(
-                          "Doctor dashboard!,",
+                          "Doctor dashboard",
                           style: Theme.of(context)
                               .textTheme
                               .headline2!
