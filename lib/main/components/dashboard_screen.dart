@@ -179,7 +179,7 @@ class DashboardScreen extends StatelessWidget {
                   child: Container(
                     padding: const EdgeInsets.all(kDefaultPadding),
                     height: 600,
-                    width: 400,
+                    width: 300,
                     decoration: const BoxDecoration(
                         color: Color.fromARGB(255, 238, 238, 238),
                         borderRadius: BorderRadius.all(

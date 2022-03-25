@@ -17,16 +17,16 @@ class SideMenu extends StatelessWidget {
           ),
           DrawerListTile(
             title: "Dashboard",
-            svgSrc: "assets/icons/menu_dashbord.svg",
+            svgSrc: "assets/icons/doctor.svg",
             press: () => selectedItem(context, 0),
           ),
           DrawerListTile(
             title: "profile",
-            svgSrc: "assets/icons/menu_task.svg",
+            svgSrc: "assets/icons/patient.svg",
             press: () => selectedItem(context, 1),
           ),
           DrawerListTile(
-            title: "users",
+            title: "Patients",
             svgSrc: "assets/icons/menu_task.svg",
             press: () => selectedItem(context, 2),
           ),
